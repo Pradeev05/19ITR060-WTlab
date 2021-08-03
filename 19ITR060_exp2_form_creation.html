@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>registration form</title>
+   <h1>
+      REGISTRATION FORM
+   </h1>
+</head>
+<body>
+   <form>
+      <fieldset>
+      <legend><b>ENTER YOUR DETAILS</b></legend>
+      <table>
+         <tr>
+            <th>Name :</th>
+            <td><input type="text" placeholder="Enter your name" pattern="^[a-zA-Z]+$" title="Name should be alphabet" /></td>
+         </tr>
+         <tr>
+            <th>Date of birth :</th>
+            <td><input type="date" </td>
+         </tr>
+         <tr>
+            <th>Gender:</th>
+            <td><input type="radio"nmae="Gender">Male
+            <input type="radio" name="Gender">Female</td>
+         </tr>
+         <tr>
+            <th>Email:</th>
+            <td><input type="email"placeholder="Enter your email"></td>
+         </tr>
+         <tr>
+            <th>Department :</th>
+            <td>
+               <select>
+               <option value= ""selected>select your dept</option>
+               <option value="IT">IT</option>
+               <option value="CSE">CSE</option>
+               <option value="ECE">ECE</option>
+               <option value="EEE">EEE</option>
+            </select>
+            </td>
+         </tr>
+         <tr>
+            <th>Mobile:</th>
+            <td><input type="text" placeholder="Enter your mobile number"pattern="[0-9]{10}"title="enter valid mobile number"></td>
+         </tr>
+            <tr>
+               <th>address:</th>
+               <td>
+                  <textarea  name="" placeholder="Enter your address here"></textarea> 
+               </td>
+            </tr>
+            <tr>
+               <th>State :</th>
+               <td><input type="text" placeholder="Enter your state" ></td>
+            </tr>
+            <tr>
+               <th>Pincode :</th>
+               <td><input type="text" placeholder="Enter your pincode"pattern="[0-9]{6}"></td>
+            </tr>
+            <tr>
+               <th>Events intrested :</th>
+               <td><input type="checkbox"name="Paper presentation">Paper presentation
+                  <br><input type="checkbox"name="QUiz">Quiz
+                  <br><input type="checkbox"name="Coding">Coding
+                  <br><input type="checkbox"name="Project presentation">Project presentation
+               <br><input type="checkbox"name="Debugging">Debugging</td>
+               
+            </tr>
+            <tr>
+               <th>Accomodation :</th>
+               <td><input type="radio" name="Accomodation">Yes
+                  <input type="radio" name="Accomodation">No</td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="submit" value="submit">
+                  <input type="reset" value="reset">
+               </td>
+            </tr>
+      </table>
+   </fieldset>
+   </form>
+</body>
+   </html>
+   <style>
+      body{text-align: start;background-color: aqua;}
+      h1{text-align: center;color: #ed4e42;font-family: 'Times New Roman', Times, serif;}
+   </style>
