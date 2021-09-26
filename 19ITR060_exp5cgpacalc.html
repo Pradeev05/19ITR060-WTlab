@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>CGPAcalculator</title>
+   
+</head>
+<body>
+
+ 
+
+  
+
+<div >
+    <h1 id="enter">Enter the subject  course credits and grade points of semester: </h1>
+ <table >
+    <colgroup>
+        <col span="2" style="background-color:red">
+        <col style="background-color:yellow">
+      </colgroup>
+    <thead>
+        <tr>
+            <th>Courses:</th>
+            <th>Course credits</th>
+            <th>Grade points</th>
+           
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+        <td> Course 1</td>
+        <td><input type="text" id="sem11a" /></td>
+        <td><input type="text" id="sem11b"  /></td>
+        </tr>
+
+
+        <tr>
+            <td> Course 2</td>
+            <td><input type="text" id="sem12a"  /></td>
+            <td><input type="text" id="sem12b" /></td>
+        </tr>
+
+        <tr>
+            <td> Course 3</td>
+            <td><input type="text" id="sem13a" /></td>
+            <td><input type="text" id="sem13b" /></td>
+        </tr>
+
+        <tr>
+            <td> Course 4</td>
+            <td><input type="text" id="sem14a"  /></td>
+            <td><input type="text" id="sem14b"/></td>
+        </tr>
+
+        <tr>
+            <td> Course 5</td>
+            <td><input type="text" id="sem15a"  /></td>
+            <td><input type="text" id="sem15b"  /></td>
+        </tr>
+        <tr>
+            <td> Course 6</td>
+            <td><input type="text" id="sem16a"  /></td>
+            <td><input type="text" id="sem16b" /></td>
+        </tr>
+        
+       
+        </tbody>
+
+</table>
+<p>Calculated gpa:<p id="demo"></p></p>
+<p>Calculated cgpa:<p id="demo1"></p></p>
+<p id="demo2"></p>
+
+</div>
+
+<button onclick="myFunction1()">gpa</button>
+<button onclick="cgpa()">cgpa</button>
+
+
+<script>
+
+    var gpasum=0,count=0;
+    
+ 
+
+function myFunction1() {
+    let sum = 0,creditsum=0,gpa;
+for(let i=1;i<=6;i++)
+{
+    let product,credit,grade;
+    let a="sem1"+i+"a";
+    let b="sem1"+i+"b";
+    credit=document.getElementById(a).value;
+    grade=document.getElementById(b).value;
+    creditsum=creditsum + credit*1;
+    product= credit * grade;
+    sum=sum + product;
+ 
+   
+}
+gpa=sum/creditsum;
+gpasum =gpasum + gpa;
+count=count + 1;
+document.getElementById("demo").innerHTML = gpa ;
+
+}
+
+
+
+
+function cgpa(){
+    let cgpa1= gpasum/count;
+    document.getElementById("demo1").innerHTML = cgpa1 ;
+ } 
+</script>
+<style>
+    body{background-color: cornsilk;}
+</style>
+
+
+</body>
