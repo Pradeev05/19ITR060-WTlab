@@ -1,0 +1,21 @@
+http=require("http");
+url=require("url");
+qs=require("querystring");
+http.createServer(function(request,response){
+var path=url.parse(request.url).pathname;
+console.log("Request for "+path+" received");
+var query=url.parse(request.url).query;
+var name=qs.parse(query)["name"];
+var email=qs.parse(query)["email"];
+var password=qs.parse(query)["pwd"];
+var gender=qs.parse(query)["radio"];
+var phone=qs.parse(query)["number"];
+response.write("<h1>Registered successfully in Get Method</h1>");
+response.write("<p>Name\t:"+name+"</p>");
+response.write("<p>Email\t:"+email+"</p>");
+response.write("<p>Password\t:"+password+"</p>");
+response.write("<p>Gender\t:"+gender+"</p>");
+response.write("<p>Phone\t:"+phone+"</p>");
+response.end();
+}).listen(3000);
+console.log("Server has started");
